@@ -35,10 +35,8 @@ public class TradeSearchRestController {
 		logger.info("inside ResponseEntity<Trade> getTrade(@PathVariable(value = \"tradeId\") int tradeId) method ");
 		Trade trade = tradeService.findById(tradeId);
 		if (trade != null) {
-			System.out.println("inside if condition");
 			return new ResponseEntity<Trade>(trade, HttpStatus.FOUND);
 		}
-		System.out.println("not in if condition");
 		return new ResponseEntity<Trade>(trade, HttpStatus.NOT_FOUND);
 	}
 
@@ -49,7 +47,6 @@ public class TradeSearchRestController {
 
 	@GetMapping("/test")
 	public ResponseEntity<Void> getTest() {
-		System.out.println("test testing");
 		return new ResponseEntity<Void>(HttpStatus.FOUND);
 	}
 }
