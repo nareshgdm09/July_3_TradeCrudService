@@ -33,7 +33,7 @@ public class TradeSearchRestControllerTest {
 	public void setup() {
 
 		JacksonTester.initFields(this, new ObjectMapper());
-		mvc = MockMvcBuilders.standaloneSetup(tradeSearchRestController).addFilters().build();
+		mvc = MockMvcBuilders.standaloneSetup(tradeSearchRestController).build();
 	}
 
 	@Test
